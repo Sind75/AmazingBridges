@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Details | Amazing Bridges</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link type="text/css" rel="stylesheet" href="assets/font/font-icon/font-awesome/css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="assets/font/font-icon/font-flaticon/flaticon.css">
+
+    <link type="text/css" rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/slick-slider/slick.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/slick-slider/slick-theme.css">
+    <link type="text/css" rel="stylesheet" href="assets/libs/selectbox/css/jquery.selectbox.css">
+
+    <!-- STYLE CSS-->
+    <link type="text/css" rel="stylesheet" href="assets/css/layout.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/components.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/responsive.css">
+    
+    <link rel="shortcut icon" href="assets/images/logo/logo-fav.png">
+    <!-- ------AngularJS------ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-sanitize.js"></script>
+
+
+</head>
+<body>
+    <div class="body-wrapper"><!-- MenuMobile -->
+        <div class="wrapper-mobile-nav">
+            <div class="header-topbar">
+                <div class="topbar-search search-mobile">
+                    <form class="search-form">
+                        <div class="input-icon"><i class="btn-search fa fa-search"></i><input type="text" placeholder="Search here..." class="form-control"/></div>
+                    </form>
+                </div>
+            </div>
+            <div class="header-main">
+                <div class="menu-mobile">
+                    <ul class="nav-links nav navbar-nav">
+                        <li class="active"><a href="index.html" class="main-menu"><span class="text">Home</span></a></li>
+                        <li class="dropdown"><a href="categories.html" class="main-menu"><span class="text">Categories</span></a></li>      
+                        <li><a href="gallery.html" class="main-menu"><span class="text">Gallery</span></a></li>                        
+                        <li class="dropdown"><a href="contact-us.html" class="main-menu"><span class="text">Contact Us</span></a></li>
+                        <li class="dropdown"><a href="about-us.html" class="main-menu"><span class="text">About Us</span></a></li>
+                        <li class="dropdown"><a href="sitemap.html" class="main-menu"><span class="text">Sitemap</span></a></li>
+
+                        <li class="dropdown"><a class="main-menu"><span class="text">My Account</span></a><span class="icons-dropdown"><i class="fa fa-angle-down"></i></span>
+                            <ul class="dropdown-menu dropdown-menu-1">
+                                <li><a href="login.html" class="link-page">Login</a></li>
+                                <li><a href="register.html" class="link-page">Register</a></li>
+                            </ul>
+                        </li> 
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-content"><!-- HEADER-->
+            <header >
+                <div class="bg-transparent header-01">
+                    <div class="header-main">
+                        <div class="container">
+                            <div class="header-main-wrapper">
+                                <div class="hamburger-menu">
+                                    <div class="hamburger-menu-wrapper">
+                                        <div class="icons"></div>
+                                    </div>
+                                </div>
+                                <nav class="navigation">
+                                    <ul class="nav-links nav navbar-nav">
+                                        <li><a href="index.html" class="main-menu"><span class="text">Home</span></a>
+                                        </li>
+                                        <li class="dropdown active"><a href="categories.html" class="main-menu"><span class="text">Categories</span></a>
+                                        </li>
+                                        <li><a href="gallery.html" class="main-menu"><span class="text">Gallery</span></a></li>
+                                        <li class="dropdown"><a href="contact-us.html" class="main-menu"><span class="text">Contact Us</span></a></li>
+                                        </li>
+                                        <li class="dropdown"><a href="about-us.html" class="main-menu"><span class="text">About Us</span></a>
+                                        </li>
+                                        <li><a href="sitemap.html" class="main-menu"><span class="text">Sitemap</span></a>
+                                        </li>
+                                        
+                                        <li class="dropdown"><a class="main-menu"><span class="text">My Account</span><span class="icons-dropdown"><i class="fa fa-angle-down"></i></span></a>
+                                            <ul class="dropdown-menu dropdown-menu-1">
+                                                <li><a href="login.html" class="link-page">Login</a></li>
+                                                <li><a href="register.html" class="link-page">Register</a></li>  
+                                            </ul>
+                                        </li>
+                                        <li class="button-search"><p class="main-menu"><i class="fa fa-search"></i></p></li>
+                                    </ul>
+
+                                    <div class="nav-search hide">
+                                        <form><input type="text" placeholder="Search" class="searchbox">
+                                            <button type="submit" class="searchbutton fa fa-search"></button>
+                                        </form>
+                                    </div>
+                                </nav>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        <!-- WRAPPER-->
+
+        
+        <div id="wrapper-content" ng-app="MyApp" ng-controller="MyController"><!-- MAIN CONTENT-->
+            <div class="main-content">
+                <section class="page-banner" style="background-image: url('assets/images/details/{{photo}}.jpg');">
+                    <div class="container">
+                        <div class="page-title-wrapper">
+                            <div class="page-title-content">
+                                <ol class="breadcrumb">
+                                    <li><a target="_self" href="index.html" class="link home">Home</a></li>
+                                    <li><a target="_self" href="categories.html" class="link">Categories</a></li>
+                                    <li class="active"><a target="_self" href="categories.html" class="link">{{name}}</a></li>
+
+                                </ol>
+                                <div class="clearfix"></div>
+                                <h4 class="captions">{{name}}</h4></div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div id="detalis-slide" class="slide-container">
+                        <div data-u="loading" class="jssorl-009-spin">
+                            <img src="assets/images/gallery/loading.gif">
+                        </div>
+                        <div data-u="slides" class="dt-slide">
+                            <div>
+                                <img data-u="image" src="assets/images/gallery/{{slide}}.jpg" />
+                            </div>
+                            <div>
+                                <img data-u="image" src="assets/images/gallery/{{photo}}.jpg" />
+                            </div>
+                            <!-- <div>
+                                <img data-u="image" src="assets/images/gallery/{{slide3}}.jpg" />
+                            </div>
+                            <div>
+                                <img data-u="image" src="assets/images/gallery/{{slide4}}.jpg" />
+                            </div> -->
+                        </div>
+                        
+                        <!-- Arrow Navigator -->
+                        <div data-u="arrowleft" class="jssora061-l" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                            <svg viewbox="0 0 16000 16000" >
+                                <path class="a" d="M11949,1919L5964.9,7771.7c-127.9,125.5-127.9,329.1,0,454.9L11949,14079"></path>
+                            </svg>
+                        </div>
+                        <div data-u="arrowright" class="jssora061-r" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                            <svg viewbox="0 0 16000 16000" >
+                                <path class="a" d="M5869,1919l5984.1,5852.7c127.9,125.5,127.9,329.1,0,454.9L5869,14079"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="page-main">
+        
+                    <div class="hotel-result-main padding-top padding-bottom">
+                        <div class="container">
+                            
+                            <div class="result-body">
+                                <div class="row">
+                                    <div class="col-md-8 main-right">
+                                        <div ng-bind-html="details">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 sidebar-widget">
+                                        <div class="col-2">
+                                            <div class="find-widget widget"><h4 class="title-widgets">Information</h4>
+                                                <table class="table">
+                                                    <tbody>
+                                                        <tr>
+                                                      
+                                                            <th>Length(m)</th>
+                                                            <td>{{long}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                      
+                                                            <th>Opened</th>
+                                                            <td>{{year}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                      
+                                                            <th>Structural height</th>
+                                                            <td>{{tall}}</td>
+                                                        </tr>
+                                                        <tr>
+
+                                                            <th>Country</th>
+                                                            <td>{{country}}</td>
+                                                        </tr>
+                                                        <tr>
+
+                                                            <th>Deck height</th>
+                                                            <td>{{high}}</td>
+
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                
+                                                <div class="clearfix"></div>
+                                                <div class="find-widget widget"><h4 class="title-widgets">Location</h4>
+                                                    <iframe ng-src="{{trustSrc(iframe)}}" frameborder="0" style="border:0;width: 100%;" allowfullscreen=""></iframe></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="special-offer margin-top70"><h3 class="title-style-2">Most visited bridges</h3>
+                                <div class="special-offer-list">
+                                    <div class="special-offer-layout">
+                                        <div class="image-wrapper"><a target="_self" href="details.html?id=5" class="link"><img src="assets/images/categories/as-longest-1.jpg" alt="" class="img-responsive"></a>
+                                        <div class="title-wrapper"><a target="_self" href="details.html?id=5" class="title">The Danyang Kunshan Grand Bridge</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="special-offer-layout">
+                                        <div class="image-wrapper"><a target="_self" href="details.html?id=2" class="link"><img src="assets/images/categories/af-tallest-1.jpg" alt="" class="img-responsive"></a>
+
+                                            <div class="title-wrapper"><a target="_self" href="details.html?id=2" class="title">The Mohammed VI Bridge</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="special-offer-layout">
+                                        <div class="image-wrapper"><a target="_self" href="details.html?id=3" class="link"><img src="assets/images/categories/eu-longest-2.jpg" alt="" class="img-responsive"></a>
+
+                                            <div class="title-wrapper"><a target="_self" href="details.html?id=3" class="title">The Bloukrans Bridge</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="special-offer-layout">
+                                        <div class="image-wrapper"><a target="_self" href="details.html?id=15" class="link"><img src="assets/images/categories/eu-tallest-2.jpg" alt="" class="img-responsive"></a>
+
+                                            <div class="title-wrapper"><a target="_self" href="details.html?id=15" class="title">The Mezcala Bridge</a></div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- BUTTON BACK TO TOP-->
+            <div id="back-top"><a href="#top" class="link"><i class="fa fa-angle-double-up"></i></a></div>
+        </div>
+
+<!-- FOOTER-->
+        <footer>
+            
+            <div class="footer-main padding-top">
+                <div class="container">
+                    <div class="footer-main-wrapper"><a href="index.html" class="logo-footer"><img src="assets/images/logo/logo-2.png" alt="" class="img-responsive"/></a>
+
+                        <div class="row">
+                            <div class="col-2">
+
+                                <div class="col-md-3 col-xs-5">
+                                    <div class="explore-widget widget">
+                                        <div class="title-widget">Our mission</div>
+                                            <div class="content-widget">
+                                                <div class="info-list">                                                
+                                                Preserving this heritage has been the mission of Amazing Bridges, as we work with local partners around the globe to provide support for preservation, restoration, and stewardship.
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-xs-3">
+                                    <div class="booking-widget widget text-center">
+                                        <div class="title-widget">Our Values</div>
+                                            <div class="content-widget">
+                                                <ul class="list-unstyled">
+                                                    <li><a href="about-us.html" class="link">Collaboration</a></li>
+                                                    <li><a href="about-us.html" class="link">Providing guides</a></li>
+                                                    <li><a href="about-us.html" class="link">Giving talks</a></li>
+                                                    <li><a href="about-us.html" class="link">Publishing papers</a></li>
+                                                </ul>
+                                            </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="col-md-3 col-xs-5">
+                                    <div class="contact-us-widget widget">
+                                        <div class="title-widget">contact us</div>
+                                        <div class="content-widget">
+                                            <div class="info-list">
+                                                <ul class="list-unstyled">
+                                                    <li><i class="icons fa fa-map-marker"></i><a href="https://www.aptech-education.com/" class="link">75 Brickyard Ave, Brooklyn, New York 11237</a></li>
+                                                    <li><i class="icons fa fa-phone"></i><a href="tel:+2229998888" class="link">222 - 999 - 8888</a></li>                                         
+                                                    <li><i class="icons fa fa-envelope-o"></i><a href="mailto:amazingproject2019@gmail.com" class="link">amazingproject2019@gmail.com</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                         
+                          
+                                <div class="col-md-3 col-xs-5">
+                                    <div class="contact-us-widget widget">
+                                        <div class="title-widget">Subscribe now</div>
+                                        <div class="content-widget">
+
+                                            <div class="form-email"><p class="text">Sign up for our mailing list to get latest updates.</p>
+
+                                                <form action="success.html">
+                                                    <div class="input-group"><input type="email" placeholder="Email address" class="form-control form-email-widget"required><span class="input-group-btn"><button type="submit" class="btn-email">&#10004;</button></span></div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+ 
+                    </div>
+                </div>
+            </div>
+            <div class="hyperlink">
+                <div class="container">
+
+                    <div class="social-footer">
+                        <ul class="list-inline list-unstyled">
+                            <li><a href="https://www.aptech-education.com/" class="link facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.aptech-education.com/" class="link twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.aptech-education.com/" class="link pinterest"><i class="fa fa-pinterest-p"></i></a></li>
+                            <li><a href="https://www.aptech-education.com/" class="link google"><i class="fa fa-google"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="name-company">&copy; SYM Group</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<!-- LIBRARY JS-->
+    <script src="assets/libs/jquery/jquery-2.2.3.min.js"></script>
+
+    <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/libs/detect-browser/browser.js"></script>
+    <script src="assets/libs/smooth-scroll/jquery-smoothscroll.js"></script>
+    <script src="assets/libs/wow-js/wow.min.js"></script>
+    <script src="assets/libs/slick-slider/slick.min.js"></script>
+    <script src="assets/libs/selectbox/js/jquery.selectbox-0.2.js"></script>
+    <script src="assets/libs/jquery/jssor.slider-28.0.0.min.js"></script>
+    <!-- MAIN JS-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/details.js"></script>
+    <script src="assets/libs/JSON.js"></script>
+
+    <!-- LOADING JS FOR PAGE-->
+    <script src="assets/js/pages/home-page.js"></script>
+    <script src="assets/js/pages/about-us.js"></script>
+
+</body>
+</html>
